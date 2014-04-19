@@ -9,7 +9,8 @@
 */
 
 span.phone {
-	background-color: #FFFF99;
+	color: #FFFF99;
+	font-weight: bold;
 }
 
 /*********************************************************************************/
