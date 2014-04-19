@@ -202,8 +202,10 @@
 
 		<script type="text/javascript">
 			//console.log('doc width' + jQuery(document).width());
-			if (jQuery(document).width() < 450)
-				$('.video').css('width', jQuery(document).width()*.9);
+			if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+				alert('mobile device user');
+				$('.video').css('width', '90%');
+			}
 		</script>
 
 	</body>
