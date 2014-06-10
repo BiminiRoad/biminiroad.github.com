@@ -87,11 +87,8 @@
 								</section>
 							</div>
 							<div class="4u">
-								<section class="box box-style1">
+								<section class="box box-style1" id="testimonials">
 									<h3>Testimonials</h3>
-									<p class="one-long-line">&quot;Tony performed at our daughter's high school graduation party at our home and did an amazing job. It was fun music and perfect for a party in that the music set the perfect tone for a summer celebration, but didn't overwhelm the conversations. I'd highly recommend Tony to others!!&quot; -Bob K.</p>
-									<p class="one-long-line">&quot;Tony was very professional and played to all demographics, he will definitely be booked at my restaurant!&quot; -Todd R.</p>
-									<p class="one-long-line">&quot;We had a pool party on the 24th of May and we really didn't expect it to be any different than the others we had thrown over the years.  Friends, food and some background music to create white noise.  Then we learned what Tony could do and invited him to provide some entertainment.  I couldn't be more pleased with his performance.  This style of music was perfect for our event and really took our party up several levels.  He has an incredible catalog to choose from and gave everyone something to sing along with.  In fact, there were groups that were playing "Name that tune" which provided another level of enjoyment.  His equipment is first rate and took up very little space.  It was just plain great and would highly recommend Tony for any gathering.&quot; -Rob W.</p>
 								</section>
 							</div>
 						</div>
@@ -293,6 +290,34 @@
 				//alert('mobile device user');
 				$('.video').css('width', '90%');
 			}
+
+			var testimonials = [{
+				client: "Bob K.",
+				quote: "Tony performed at our daughter's high school graduation party at our home and did an amazing job. It was fun music and perfect for a party in that the music set the perfect tone for a summer celebration, but didn't overwhelm the conversations. I'd highly recommend Tony to others!!"
+			},{
+				client: "Todd R.",
+				quote: "Tony was very professional and played to all demographics, he will definitely be booked at my restaurant!"
+			},{
+				client: "Rob W.",
+				quote: "We had a pool party on the 24th of May and we really didn't expect it to be any different than the others we had thrown over the years.  Friends, food and some background music to create white noise.  Then we learned what Tony could do and invited him to provide some entertainment.  I couldn't be more pleased with his performance.  This style of music was perfect for our event and really took our party up several levels.  He has an incredible catalog to choose from and gave everyone something to sing along with.  In fact, there were groups that were playing \"Name that tune\" which provided another level of enjoyment.  His equipment is first rate and took up very little space.  It was just plain great and would highly recommend Tony for any gathering."
+			}];
+			var max_quote_length = 120;
+			var i = 0;
+			testimonials.forEach(function(t){
+				i++;
+				//console.log(t.client + ' : ' + t.quote);
+				var short_quote = t.quote.substr(0, max_quote_length);
+				var long_quote = t.quote;
+				if (t.quote.length > max_quote_length) {
+					short_quote += "... ";
+				}
+				$('#testimonials').append('<p class="pointer_text" id="quote_' + i + '">&quot;' + short_quote + '&quot; -' + t.client + '</p>')
+				$('#quote_' + i).hover( function() { // mouse in:
+					$( this ).html('&quot;' + long_quote + '&quot; -' + t.client);
+				}, function() { // mouse out:
+					$( this ).html('&quot;' + short_quote + '&quot; -' + t.client);
+				} );
+			});
 
 			var rate_obj = {
 				"peak weekend": {
