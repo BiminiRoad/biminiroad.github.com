@@ -1067,14 +1067,12 @@ span.phone {
 ul.footnote {
 	list-style-type: circle;
 }
-<style type="text/css">
 .one-long-line {
-   max-width:400px;
-   white-space:nowrap; 
-   overflow:hidden;
-   text-overflow:ellipsis;
-   }
+	max-width:400px;
+	white-space:nowrap; 
+	overflow:hidden;
+	text-overflow:ellipsis;
+}
 .one-long-line:hover {
-   overflow:visible;
-   }
-</style>
+	overflow:visible;
+}
