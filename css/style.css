@@ -1064,7 +1064,7 @@ span.phone {
 #twitter-bootstrap-table thead:last-child tr:last-child th:first-child, tbody:last-child tr:last-child td:first-child {
 	border-radius: 0 0 0 4px;
 }
-ul.footnote {
+ul.footnote, ul.announcements {
 	list-style-type: circle;
 }
 .one-long-line {
