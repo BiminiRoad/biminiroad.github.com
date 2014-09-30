@@ -1080,3 +1080,7 @@ ul.footnote, ul.announcements {
 	cursor: pointer; 
 	cursor: hand;
 }
+
+td.highlight {
+	background-color: #fcfdd8;
+}
