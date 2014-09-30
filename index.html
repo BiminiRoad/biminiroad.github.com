@@ -31,7 +31,7 @@
 			<nav id="nav">
 				<ul class="container">
 					<li><a href="#top">Intro</a></li>
-					<li><a href="#background">What I do</a></li>
+					<li><a href="#background">Information</a></li>
 					<li><a href="#video">Video</a></li>
 					<li><a href="#audio">Audio</a></li>
 					<li><a href="#booking">Booking</a></li>
@@ -48,20 +48,21 @@
 						</div>
 						<div class="8u">
 							<header>
-								<h1>I'm <strong>Tony Schmitt</strong>.</h1>
+								<h1><strong>Tony Schmitt,</strong> Steel drummer</h1>
 							</header>
-							<p>I play the <strong>steel drum</strong>, an instrument from Trinidad and Tobago.</p>
+							<h2>Summer is over...</h2>
+							<p>...but you can still bring back warm memories with the tropical sounds of the steel drum. Plus, you can take advantage of the <strong>lowest booking rates of the year!</strong></p>
+								<!--
 							<h3>Special Announcement <img src="https://dl.dropboxusercontent.com/u/41751862/trumpet.png" width="66" height="25"></h3>
 							<ul class="announcements">Catch me live during the summer at these great public events:
-								<!--
 								<li>The James Cancer Hospital atrium from 1pm to 3pm on Friday, August 22.</li>
 								<li>The gazebo in Olde Pickerington Village from 8am to 10am on Saturday, August 9th as the Pelotonia bike riders pass through. <a target="_new" href="http://mapq.st/1smJvMZ">Corner of Center St. &amp; Columbus St.</a></li>
 								<li>Fridays at Sycamore Creek Park, one hour before dusk at <a target="_new" href="http://www.ci.pickerington.oh.us/Pages/Departments/Parks_and_Recreation/Special_Events/">Friday Night Flicks</a> in Pickerington: <del>June 6 &amp; 13,</del> August 1, 8, &amp; 15.</li>
 								<li>Rock the Boat with other older adults in Delaware, OH on September 4th. Have fun and take part in the raffle for a chance to win a Caribbean Cruise! Details below.
 							<img src="https://dl.dropboxusercontent.com/u/41751862/rock-the-boat.png" width="492" height="384">
-							-->
-								<li>Thursdays at <a target="_new" href="https://www.facebook.com/oldepickeringtonfarmersmarket">Olde Pickerington Farmers' Market</a> from 5:30pm - 7pm on the following dates: <del>June 19 &amp; 26, July 10</del>, August <del>14</del> &amp; 28, September 11 &amp; 25.</li>
+								<li>Thursdays at <a target="_new" href="https://www.facebook.com/oldepickeringtonfarmersmarket">Olde Pickerington Farmers' Market</a> from 5:30pm - 7pm on the following dates: <del>June 19 &amp; 26, July 10</del>, August <del>14 &amp; 28</del>, September <del>11</del &amp; 25.</li>
 							</ul>
+							-->
 
 							<!-- Begin MailChimp Signup Form -->
 							<p><a href="" onClick="$('#mc_embed_signup').slideToggle('slow',function(){});return false" id="show_mc_subscribe_form">Click here</a> to join my newsletter, for advance notice of shows!</p>
@@ -92,7 +93,8 @@
 			<div class="wrapper wrapper-style2">
 				<article id="background">
 					<header>
-						<h2>I play a mix of traditional and contemporary songs.</h2>
+						<h2>I play a mix of traditional and contemporary songs</h2>
+						<h3>From Buffett to Beatles, I have 2 1/2 hours of repertoir ready to go</h3>
 						<span>Consider adding an island flavor to your next party, event, or venue!</span>
 					</header>
 					<div class="container">
@@ -234,6 +236,8 @@
 														<li><em>Half hours are okay; just take half the hourly rate.</em></li>
 														<li><em>For events with no electrical power available, add $40 and I will provide my own power (3 hrs max).</em></li>
 														<li><em>For events in direct sunlight with no shade available, add $30 and I will provide my own canopy.</em></li>
+														<li><em>For events during normal business hours (9am-5pm M-F), I may charge $20 extra, as I need to use a vacation day.</em></li>
+														<li><em>Distant events (30+ miles from Pickerington, OH) may incur a mileage fee.</em></li>
 													</ul>
 												</td>
 											</tr>
@@ -394,7 +398,8 @@
 					var hourly_cost = value['engagement_fee'] + (value['hourly_rate'] * i);
 					td.push('$' + hourly_cost);
 				}
-				tr.push('<td class="left">' + td.join('</td><td>') + '</td>');
+				var extra_class = (key.indexOf('off-peak') > -1) ? 'highlight' : '';
+				tr.push('<td class="left ' + extra_class + '">' + td.join('</td><td class="' + extra_class + '">') + '</td>');
 			});
 			var new_rows = '<tr>' + tr.join('</tr><tr>') + '</tr>';
 			//console.log(tr.toString());
