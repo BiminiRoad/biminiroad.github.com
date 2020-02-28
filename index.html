@@ -48,7 +48,8 @@
 						</div>
 						<div class="8u">
 							<header>
-								<h1><strong>Tony Schmitt,</strong> Steel drummer</h1>
+								<h1><strong>Tony Schmitt,</strong> Steel Pannist</h1>
+								<h3>(Steel Drum Performer)</h3>
 							</header>
 							<h2>Things are heating up!</h2>
 							<p>Book now to reserve tropical sounds for your next event.
@@ -84,7 +85,7 @@
 								<section class="box box-style1">
 									<h3>Memorable Occasions</h3>
 									<p>Adding island sounds will give a special touch to your event or party and make it memorable.</p>
-									<p>Consider steel drum music for Private parties, Festivals, Restaurants, Clubs, and Wedding receptions.</p>
+									<p>Consider steel pan music for Private parties, Festivals, Restaurants, Clubs, and Wedding receptions.</p>
 									<p>I live and perform in the Columbus, Ohio area.</p>
 									<p>I perform on the side, so weeknight availability is usually limited to after 6pm.</p>
 								</section>
@@ -107,7 +108,7 @@
 						</div>
 					</div>
 					<footer>
-						<p><strong>Steel drum music can liven up any party!</strong></p>
+						<p><strong>Steel pan music can liven up any party!</strong></p>
 						<a href="#video" class="button button-big">Watch some videos</a>
 					</footer>
 				</article>
@@ -197,7 +198,7 @@
 						<div class="row">
 							<div class="6u">
 								<article class="box box-style1">
-									<h3>Performance Rates</h3>
+									<h3><span id="year"></span> Performance Rates</h3>
 									<table id="twitter-bootstrap-table" summary="Booking Rates">
 										<thead>
 											<tr>
@@ -212,12 +213,11 @@
 											<tr>
 												<td colspan=5>
 													<ul class="footnote">
-														<li><em>Peak season is Memorial Day through Labor Day <span id="holidays"></span>.</em></li>
+														<li><em>Peak season is Memorial Day Weekend through Labor Day <span id="holidays"></span>.</em></li>
 														<li><em>Weekend rates apply to Friday through Sunday</em></li>
 														<li><em>Half hours are okay; just take half the hourly rate.</em></li>
-														<li><em>For events with no electrical power available, no extra charge (4 hrs max).</em></li>
-														<li><em>For events in direct sunlight with no shade available, add $30 and I will provide my own canopy.</em></li>
-														<li><em>For events during normal business hours (9am-5pm M-F), I may charge $20 extra, as I need to use a vacation day.</em></li>
+														<li><em>For events with no electrical power available, no extra charge.</em></li>
+														<li><em>For events in direct sunlight with no shade available, I can provide my own canopy.</em></li>
 														<li><em>Distant events (30+ miles from Pickerington, OH) may incur a mileage fee.</em></li>
 													</ul>
 												</td>
@@ -295,7 +295,7 @@
 									-->
 								</ul>
 								<hr />
-								<img src="https://dl.dropboxusercontent.com/u/41751862/United%20States%20of%20America(USA).png" height="64" width="64" alt="United States of America Flag"> 
+								<img src="https://dl.dropboxusercontent.com/u/41751862/United%20States%20of%20America(USA).png" height="64" width="64" alt="United States of America Flag">
 								<img src="https://dl.dropboxusercontent.com/u/41751862/Trinidad%20%26%20Tobago.png" height="64" width="64" alt="Trinidad and Tobago Flag">
 							</div>
 						</div>
@@ -392,7 +392,7 @@
 				var dow = may_day.getDay();
 				//console.log(i + ':' + dow + ':' + may_day.toDateString());
 				if (dow === 1) {
-					memorial_day = '5/' + i;
+					memorial_day = '5/' + (i-3) + '/' + year;
 					break;
 				}
 			}
@@ -402,12 +402,13 @@
 				var dow = sept_day.getDay();
 				//console.log(i + ':' + dow + ':' + sept_day.toDateString());
 				if (dow === 1) {
-					labor_day = '9/' + i;
+					labor_day = '9/' + i + '/' + year;
 					break;
 				}
 			}
 			//console.log(memorial_day + ' - ' + labor_day);
 			$('#holidays').html('(' + memorial_day + ' - ' + labor_day + ')');
+			$('#year').html(year);
 		</script>
 
 		<script>
